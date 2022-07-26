@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissor</title>
-</head>
-<body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- setup 3 divs for the rock paper scissor choices -->
+    <section>
+      <div class="container mx-auto p-8">
+        <h1 class="text-center">Make a selection</h1>
+      </div>
+    </section>
+
+    <section id="playerSelection" class="container max-w-lg mx-auto">
+      <div class="flex justify-around">
+        <button id="Rock" class="px-4 py-2 bg-green-600 text-white rounded">
+          Rock
+        </button>
+        <button id="Paper" class="px-4 py-2 bg-green-600 text-white rounded">
+          Paper
+        </button>
+        <button id="Scissor" class="px-4 py-2 bg-green-600 text-white rounded">
+          Scissor
+        </button>
+      </div>
+      <div id="scorecard">
+        <div class="current-round bg-gray-800 mt-8">
+          <h3 class="mx-auto text-center text-gray-50">Current Round</h3>
+          <div
+            class="flex grow gap-x-1 justify-between bg-gray-500 border border-gray-500"
+          >
+            <div class="flex-1 text-center mx-auto bg-gray-100">
+              <h4 class="border-b border-gray-500 text-lg">Computer</h4>
+              <h5 id="computerChoice" class="p-4">---</h5>
+            </div>
+            <div class="flex-1 text-center mx-auto bg-gray-100">
+              <h4 class="border-b border-gray-500 text-lg">Player</h4>
+              <h5 id="playerChoice" class="p-4">---</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
